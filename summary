@@ -1,0 +1,13 @@
+根据 关键词 查看日志 并返回关键词所在行：
+
+　　方法一：cat 路径/文件名 | grep 关键词
+
+　　demo：
+
+　　　　cat  test.log | grep "http"　　# 返回test.log中包含http的所有行
+
+　　方法二：grep -i 关键词 路径/文件名  （与方法一效果相同，不同写法而已）
+
+　　demo：
+
+　　　　grep -i "http" ./test.log　　# 返回test.log中包含http的所有行(-i忽略大小写）
