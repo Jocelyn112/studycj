@@ -1,13 +1,6 @@
-根据 关键词 查看日志 并返回关键词所在行：
-
-　　方法一：cat 路径/文件名 | grep 关键词
-
-　　demo：
-
-　　　　cat  test.log | grep "http"　　# 返回test.log中包含http的所有行
-
-　　方法二：grep -i 关键词 路径/文件名  （与方法一效果相同，不同写法而已）
-
-　　demo：
-
-　　　　grep -i "http" ./test.log　　# 返回test.log中包含http的所有行(-i忽略大小写）
+1.查看当前时间开始的日志
+  tail -fn 1 x.log
+2.根据关键字查看日志
+  grep 'key' x.log 
+3.查看某段时间内的关键字日志
+  sed -n '/2018-06-21 14:30:20/,/2018-06-21 16:12:00/p' catalina.out | grep 'keyword'
