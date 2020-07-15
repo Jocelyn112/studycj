@@ -1,5 +1,6 @@
 1.查看当前时间开始的日志
-  tail -fn 1 x.log
+  tail -fn 1 x.log/
+  tail - f x.log
 2.根据关键字查看日志
   grep 'key' x.log 
 3.查看某段时间内的关键字日志
