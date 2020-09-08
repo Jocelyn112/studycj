@@ -5,3 +5,5 @@
   grep 'key' x.log 
 3.查看某段时间内的关键字日志
   sed -n '/2018-06-21 14:30:20/,/2018-06-21 16:12:00/p' catalina.out | grep 'keyword'
+4.根据关键字查看后1000行日志  （-C 前后、-B 前、-A后）
+grep -A 1000 '发起签署合同,employeeId:27' sys-user.log
